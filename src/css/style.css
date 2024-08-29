@@ -75,8 +75,11 @@ section {
 }
 
 img {
+    /* this is very aggressive! */
+    /*
     width: 100%;
     height: auto;
+    */
 }
 
 h1 {
@@ -147,6 +150,7 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
+    width: 100%; /* may need to update for mobile */
 }
 
 .hamburger {
@@ -641,7 +645,7 @@ p {
 }
 
 .card {
-    width: 348px;
+    width: 348px; /* fixed widths can cause fluid containers to overlap */
     height:100%;
     padding: 24px;
     background: #ffffff;
@@ -773,3 +777,13 @@ p {
     background-size: cover;
 }
 
+
+
+.icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.icon-container > img {
+    margin: 1rem;
+}
